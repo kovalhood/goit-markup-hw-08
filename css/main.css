@@ -314,7 +314,8 @@ address {
 }
 
 @media (min-width: 768px) {
-  .menu-toggle {
+  .menu-toggle,
+  .menu-toggle--close {
     display: none;
   }
 }
