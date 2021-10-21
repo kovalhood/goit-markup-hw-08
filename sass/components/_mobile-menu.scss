@@ -75,6 +75,10 @@
   &--current {
     color: $accent-color;
   }
+
+  @media screen and(max-height:480px) {
+    margin-bottom: 20px;
+  }
 }
 
 .mobile-contacts {
@@ -85,16 +89,22 @@
   margin: 0;
 }
 
+.mobile-contacts__social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
 .mobile-contacts__communication,
 .mobile-contacts__social {
   padding: 0;
   list-style: none;
 }
 
-.mobile-contacts__social {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
+@media screen and(max-height:480px) {
+  .mobile-contacts__communication {
+    display: none;
+  }
 }
 
 .mobile-contacts__communication__item {
