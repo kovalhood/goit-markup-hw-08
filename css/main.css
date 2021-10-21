@@ -1070,7 +1070,7 @@ address {
   pointer-events: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-height: 600px) {
   .backdrop {
     overflow-y: scroll;
   }
