@@ -382,6 +382,8 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: -10px;
 }
 
@@ -412,8 +414,8 @@ address {
   color: #2196f3;
 }
 
-.mobile-contacts__social__item:not(:last-child) {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+.mobile-contacts__social__item:not(:first-child) {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mobile-contacts__social__link {
