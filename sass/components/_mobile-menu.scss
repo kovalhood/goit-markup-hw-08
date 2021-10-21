@@ -76,7 +76,13 @@
     color: $accent-color;
   }
 
+  @media screen and(max-width:440px) {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
   @media screen and(max-height:480px) {
+    font-size: 32px;
     margin-bottom: 20px;
   }
 }
@@ -124,6 +130,11 @@
     color: $button-primaty-hover;
   }
 
+  @media screen and(max-width:440px) {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
   &--mail {
     margin-bottom: 54px;
     font-size: 24px;
@@ -132,6 +143,11 @@
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+
+    @media screen and(max-width:440px) {
+      margin-bottom: 40px;
+      font-size: 18px;
     }
   }
 }
@@ -159,5 +175,13 @@
   &:hover,
   &:focus {
     color: $button-primaty-hover;
+  }
+
+  @media screen and(max-width:440px) {
+    font-size: 14px;
+  }
+
+  @media screen and(max-height:480px) {
+    font-size: 14px;
   }
 }
