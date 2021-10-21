@@ -7,6 +7,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 
   &.is-hidden {
     visibility: visible;
@@ -20,8 +21,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -29,6 +30,11 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.8);
@@ -64,12 +70,14 @@
 }
 
 .form__title {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 0.87;
+  line-height: 1.5;
   text-align: center;
   color: $primary-black-color;
+
+  // line-height: 0.87;
 }
 
 .form__field {
@@ -124,7 +132,7 @@
 
 .form__textarea {
   padding-left: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
@@ -135,7 +143,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .form__checkmark {
@@ -166,6 +174,14 @@
     border-color: $accent-color;
     fill: $primary-white-color;
     outline: none;
+  }
+}
+
+.form__agreement {
+  font-size: 12px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
   }
 }
 

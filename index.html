@@ -55,6 +55,145 @@
             >
           </li>
         </ul>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg
+            class="nav-menu__button-menu"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="menu-toggle__icon--open" href="./images/icons.svg#menu-open"></use>
+          </svg>
+        </button>
+
+        <div class="nav-menu-mobile js-menu-container" id="mobile-menu">
+          <div class="nav-menu-mobile__grid">
+            <button class="menu-toggle menu-toggle--close js-close-menu">
+              <svg
+                class="menu-toggle__icon--close"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="nav-menu__button-menu--close"
+                  href="./images/icons.svg#menu-close"
+                ></use>
+              </svg>
+            </button>
+
+            <ul class="mobile-menu">
+              <li>
+                <a href="./index.html" class="mobile-menu__item mobile-menu__item--current"
+                  >Студия</a
+                >
+              </li>
+              <li><a href="./portfolio.html" class="mobile-menu__item">Портфолио</a></li>
+              <li><a href="" class="mobile-menu__item">Контакты</a></li>
+            </ul>
+
+            <div class="mobile-contacts">
+              <ul class="mobile-contacts__communication">
+                <li>
+                  <a href="tel:+380961111111" class="mobile-contacts__communication__item">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="
+                      mobile-contacts__communication__item
+                      mobile-contacts__communication__item--mail
+                    "
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="mobile-contacts__social">
+                <li class="mobile-contacts__social__item">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mobile-contacts__social__link"
+                    aria-label="Ссылка на Instagram"
+                    >Instagram
+                  </a>
+                </li>
+                <li class="mobile-contacts__social__item">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mobile-contacts__social__link"
+                    aria-label="Ссылка на Twitter"
+                    >Twitter
+                  </a>
+                </li>
+                <li class="mobile-contacts__social__item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mobile-contacts__social__link"
+                    aria-label="Ссылка на Facebook"
+                    >Facebook
+                  </a>
+                </li>
+                <li class="mobile-contacts__social__item">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mobile-contacts__social__link"
+                    aria-label="Ссылка на LinkedIn"
+                    >LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- <button
+          type="button"
+          class="nav-menu__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="nav-menu__mobile"
+          data-menu-button
+        >
+          <svg
+            class="nav-menu__button-menu"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="nav-menu__button-menu--open" href="./images/icons.svg#menu-open"></use>
+          </svg>
+        </button>
+
+        <div class="nav-menu__mobile js-menu-container" id="nav-menu__mobile" data-menu>
+          <button
+            type="button"
+            class="nav-menu__button js-close-menu"
+            aria-expanded="false"
+            aria-controls="nav-menu__mobile"
+            data-menu-button
+          >
+            <svg
+              class="nav-menu__button-menu"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="nav-menu__button-menu--close" href="./images/icons.svg#menu-close"></use>
+            </svg>
+          </button>
+        </div> -->
       </div>
     </header>
 
@@ -641,7 +780,7 @@
             <svg class="form__check-icon" width="16" height="16">
               <use href="./images/icons.svg#form-check"></use>
             </svg>
-            <span>
+            <span class="form__agreement">
               Соглашаюсь с рассылкой и принимаю
               <a href="#" class="form__terms">Условия договора</a>
             </span>
@@ -655,5 +794,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -46,11 +46,22 @@ address {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &--small {
-    padding-top: 0;
+    display: none;
+    // padding-top: 0;
+    // padding-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--small {
+      padding-top: 0;
+    }
   }
 }
 
@@ -59,11 +70,20 @@ address {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
 }
 
 .list {
@@ -73,10 +93,15 @@ address {
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: $primary-black-color;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }

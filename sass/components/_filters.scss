@@ -1,10 +1,20 @@
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  margin-left: -8px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item + .filter__item {
+.filter__item {
+  margin-top: 15px;
   margin-left: 8px;
 }
 
