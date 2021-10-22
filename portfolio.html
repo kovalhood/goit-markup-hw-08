@@ -61,12 +61,12 @@
         <!-- Mobile menu -->
         <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg
-            class="nav-menu__button-menu"
+            class="menu-toggle__icon--open"
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
           >
-            <use class="menu-toggle__icon--open" href="./images/icons.svg#menu-open"></use>
+            <use href="./images/icons.svg#menu-open"></use>
           </svg>
         </button>
 
@@ -78,7 +78,7 @@
               height="40"
               aria-label="Переключатель мобильного меню"
             >
-              <use class="nav-menu__button-menu--close" href="./images/icons.svg#menu-close"></use>
+              <use href="./images/icons.svg#menu-close"></use>
             </svg>
           </button>
 
@@ -189,13 +189,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-1.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-1.jpg 1x, ./images/portfolio-1@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-1-t.jpg 1x, ./images/portfolio-1-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-1-d.jpg 1x, ./images/portfolio-1-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-1.jpg" alt="Веб-сайт" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -213,13 +221,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-2.jpg"
-                    alt="Дизайн"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-2.jpg 1x, ./images/portfolio-2@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-2-t.jpg 1x, ./images/portfolio-2-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-2-d.jpg 1x, ./images/portfolio-2-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-2.jpg" alt="Дизайн" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -237,13 +253,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-3.jpg"
-                    alt="Приложение"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-3.jpg 1x, ./images/portfolio-3@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-3-t.jpg 1x, ./images/portfolio-3-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-3-d.jpg 1x, ./images/portfolio-3-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-3.jpg" alt="Приложение" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -261,13 +285,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-4.jpg"
-                    alt="Маркетинг"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-4.jpg 1x, ./images/portfolio-4@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-4-t.jpg 1x, ./images/portfolio-4-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-4-d.jpg 1x, ./images/portfolio-4-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-4.jpg" alt="Маркетинг" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -285,13 +317,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-5.jpg"
-                    alt="Приложение"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-5.jpg 1x, ./images/portfolio-5@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-5-t.jpg 1x, ./images/portfolio-5-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-5-d.jpg 1x, ./images/portfolio-5-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-5.jpg" alt="Приложение" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -309,13 +349,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-6.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-6.jpg 1x, ./images/portfolio-6@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-6-t.jpg 1x, ./images/portfolio-6-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-6-d.jpg 1x, ./images/portfolio-6-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-6.jpg" alt="Веб-сайт" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -333,13 +381,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-7.jpg"
-                    alt="Дизайн"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-7.jpg 1x, ./images/portfolio-7@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-7-t.jpg 1x, ./images/portfolio-7-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-7-d.jpg 1x, ./images/portfolio-7-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-7.jpg" alt="Дизайн" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -357,13 +413,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-8.jpg"
-                    alt="Маркетинг"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-8.jpg 1x, ./images/portfolio-8@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-8-t.jpg 1x, ./images/portfolio-8-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-8-d.jpg 1x, ./images/portfolio-8-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-8.jpg" alt="Маркетинг" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -381,13 +445,21 @@
             <li class="projects-grid__item">
               <a href="" class="project link">
                 <div class="project__description">
-                  <img
-                    class="project__image"
-                    src="./images/portfolio-9.jpg"
-                    alt="Приложение"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio-9.jpg 1x, ./images/portfolio-9@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-9-t.jpg 1x, ./images/portfolio-9-t@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/portfolio-9-d.jpg 1x, ./images/portfolio-9-d@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img class="project__image" src="./images/portfolio-9.jpg" alt="Приложение" />
+                  </picture>
                   <div class="project__overlay">
                     <p class="project__text">
                       Технокряк это современная площадка распространения коронавируса. Компании

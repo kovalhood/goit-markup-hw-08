@@ -95,20 +95,11 @@
   margin: 0;
 }
 
-.mobile-contacts__social {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
-}
-
-.mobile-contacts__communication,
-.mobile-contacts__social {
+.mobile-contacts__communication {
   padding: 0;
   list-style: none;
-}
 
-@media screen and(max-height:480px) {
-  .mobile-contacts__communication {
+  @media screen and (max-height: 480px) {
     display: none;
   }
 }
@@ -150,6 +141,14 @@
       font-size: 18px;
     }
   }
+}
+
+.mobile-contacts__social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  padding: 0;
+  list-style: none;
 }
 
 .mobile-contacts__social__item {

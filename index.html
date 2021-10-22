@@ -59,12 +59,12 @@
         <!-- Mobile menu -->
         <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg
-            class="nav-menu__button-menu"
+            class="menu-toggle__icon--open"
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
           >
-            <use class="menu-toggle__icon--open" href="./images/icons.svg#menu-open"></use>
+            <use href="./images/icons.svg#menu-open"></use>
           </svg>
         </button>
 
@@ -76,7 +76,7 @@
               height="40"
               aria-label="Переключатель мобильного меню"
             >
-              <use class="nav-menu__button-menu--close" href="./images/icons.svg#menu-close"></use>
+              <use href="./images/icons.svg#menu-close"></use>
             </svg>
           </button>
 
@@ -225,30 +225,33 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="services list">
             <li class="services__item">
-              <img
-                src="./images/what-we-do-1.jpg"
-                alt="Десктопные приложения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="./images/what-we-do-1.jpg 1x, ./images/what-we-do-1@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/what-we-do-1.jpg" alt="Десктопные приложения" />
+              </picture>
               <p class="services__description">Десктопные приложения</p>
             </li>
             <li class="services__item">
-              <img
-                src="./images/what-we-do-2.jpg"
-                alt="Мобильные приложения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="./images/what-we-do-2.jpg 1x, ./images/what-we-do-2@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/what-we-do-2.jpg" alt="Мобильные приложения" />
+              </picture>
               <p class="services__description">Мобильные приложения</p>
             </li>
             <li class="services__item">
-              <img
-                src="./images/what-we-do-3.jpg"
-                alt="Дизайнерские решения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="./images/what-we-do-3.jpg 1x, ./images/what-we-do-3@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/what-we-do-3.jpg" alt="Дизайнерские решения" />
+              </picture>
               <p class="services__description">Дизайнерские решение</p>
             </li>
           </ul>
@@ -261,13 +264,21 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team list">
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team-1.jpg"
-                alt="Product Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-1.jpg 1x, ./images/team-1@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="./images/team-1-t.jpg 1x, ./images/team-1-t@2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team-1-d.jpg 1x, ./images/team-1-d@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img class="team__image" src="./images/team-1.jpg" alt="Product Designer" />
+              </picture>
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p class="team__position">Product Designer</p>
               <ul class="social-team list">
@@ -326,13 +337,21 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team-2.jpg"
-                alt="Frontend Developer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-2.jpg 1x, ./images/team-2@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="./images/team-2-t.jpg 1x, ./images/team-2-t@2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team-2-d.jpg 1x, ./images/team-2-d@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img class="team__image" src="./images/team-2.jpg" alt="Frontend Developer" />
+              </picture>
               <h3 class="team__name">Ольга Репина</h3>
               <p class="team__position">Frontend Developer</p>
               <ul class="social-team list">
@@ -391,13 +410,21 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team-3.jpg"
-                alt="Marketing"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-3.jpg 1x, ./images/team-3@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="./images/team-3-t.jpg 1x, ./images/team-3-t@2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team-3-d.jpg 1x, ./images/team-3-d@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img class="team__image" src="./images/team-3.jpg" alt="Marketing" />
+              </picture>
               <h3 class="team__name">Николай Тарасов</h3>
               <p class="team__position">Marketing</p>
               <ul class="social-team list">
@@ -456,13 +483,21 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team-4.jpg"
-                alt="UI Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-4.jpg 1x, ./images/team-4@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="./images/team-4-t.jpg 1x, ./images/team-4-t@2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team-4-d.jpg 1x, ./images/team-4-d@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img class="team__image" src="./images/team-4.jpg" alt="UI Designer" />
+              </picture>
               <h3 class="team__name">Михаил Ермаков</h3>
               <p class="team__position">UI Designer</p>
               <ul class="social-team list">
