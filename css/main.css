@@ -321,11 +321,22 @@ address {
 }
 
 .nav-menu-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 48px 40px;
   background-color: #ffffff;
   z-index: 200;
   -webkit-transform: translateX(100%);
@@ -341,18 +352,18 @@ address {
           transform: translateX(0);
 }
 
-.mobile-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 48px 0 0 40px;
-  margin: 0;
-  list-style: none;
+@media screen and (max-height: 430px) {
+  .nav-menu-mobile {
+    overflow-y: scroll;
+  }
 }
 
 .mobile-menu__item {
-  display: block;
   margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+  display: block;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
@@ -363,46 +374,39 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu__item:hover, .mobile-menu__item:focus, .mobile-menu__item--current {
+.mobile-menu__link:hover, .mobile-menu__link:focus, .mobile-menu__link--current {
   color: #2196f3;
 }
 
-@media screen and (max-width: 440px) {
-  .mobile-menu__item {
+@media screen and (max-width: 440px), screen and (max-height: 500px) {
+  .mobile-menu__link {
     font-size: 32px;
     margin-bottom: 20px;
   }
-}
-
-@media screen and (max-height: 480px) {
-  .mobile-menu__item {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-}
-
-.mobile-contacts {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 0 0 38px 40px;
-  margin: 0;
 }
 
 .mobile-contacts__communication {
-  padding: 0;
-  list-style: none;
+  margin-bottom: 64px;
 }
 
-@media screen and (max-height: 480px) {
+@media screen and (max-width: 440px), screen and (max-height: 500px) {
   .mobile-contacts__communication {
-    display: none;
+    margin-bottom: 40px;
   }
 }
 
-.mobile-contacts__communication__item {
-  display: block;
+.mobile-contacts__communication__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 440px), screen and (max-height: 500px) {
+  .mobile-contacts__communication__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.mobile-contacts__communication__link {
+  display: block;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
@@ -413,30 +417,27 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-contacts__communication__item:hover, .mobile-contacts__communication__item:focus {
+.mobile-contacts__communication__link:hover, .mobile-contacts__communication__link:focus {
   color: #188ce8;
 }
 
-@media screen and (max-width: 440px) {
-  .mobile-contacts__communication__item {
-    margin-bottom: 20px;
+@media screen and (max-width: 440px), screen and (max-height: 500px) {
+  .mobile-contacts__communication__link {
     font-size: 26px;
   }
 }
 
-.mobile-contacts__communication__item--mail {
-  margin-bottom: 54px;
+.mobile-contacts__communication__link--mail {
   font-size: 24px;
   color: #757575;
 }
 
-.mobile-contacts__communication__item--mail:hover, .mobile-contacts__communication__item--mail:focus {
+.mobile-contacts__communication__link--mail:hover, .mobile-contacts__communication__link--mail:focus {
   color: #2196f3;
 }
 
-@media screen and (max-width: 440px) {
-  .mobile-contacts__communication__item--mail {
-    margin-bottom: 40px;
+@media screen and (max-width: 440px), screen and (max-height: 500px) {
+  .mobile-contacts__communication__link--mail {
     font-size: 18px;
   }
 }
@@ -448,12 +449,13 @@ address {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: -10px;
-  padding: 0;
-  list-style: none;
+  margin-top: -10px;
 }
 
 .mobile-contacts__social__item {
   margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .mobile-contacts__social__item:not(:last-child) {
@@ -461,8 +463,6 @@ address {
 }
 
 .mobile-contacts__social__link {
-  padding-right: 10px;
-  padding-left: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -477,13 +477,7 @@ address {
   color: #188ce8;
 }
 
-@media screen and (max-width: 440px) {
-  .mobile-contacts__social__link {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-height: 480px) {
+@media screen and (max-width: 440px), screen and (max-height: 500px) {
   .mobile-contacts__social__link {
     font-size: 14px;
   }
@@ -759,7 +753,6 @@ address {
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  height: 400px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -771,14 +764,6 @@ address {
   background-size: cover;
 }
 
-@media screen and (min-width: 1200px) {
-  .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    height: 600px;
-  }
-}
-
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero@2x.jpg);
@@ -786,28 +771,30 @@ address {
   }
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-t.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-t.jpg);
   }
 }
 
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-t@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-t@2x.jpg);
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-d.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-d.jpg);
   }
 }
 
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-d@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-d@2x.jpg);
@@ -1124,8 +1111,8 @@ address {
     position: absolute;
     top: 50%;
     left: 50%;
+    height: auto;
     width: 450px;
-    height: 609px;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1147,8 +1134,6 @@ address {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 450px;
-    height: 609px;
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1168,7 +1153,6 @@ address {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    height: 581px;
   }
 }
 
@@ -1205,7 +1189,7 @@ address {
   color: #2196f3;
 }
 
-.form__title {
+.form__name {
   margin-bottom: 25px;
   font-weight: 700;
   font-size: 20px;
@@ -1214,9 +1198,14 @@ address {
   color: #212121;
 }
 
-.form__field {
+.form__label {
   display: block;
   position: relative;
+  margin: 0 0 29px 0;
+}
+
+.form__label--textarea {
+  margin: 0 0 29px 0;
 }
 
 .form__icon {
@@ -1235,7 +1224,7 @@ address {
   fill: #2196f3;
 }
 
-.form__label {
+.form__title {
   position: absolute;
   top: -16px;
   font-size: 12px;
@@ -1246,7 +1235,6 @@ address {
 .form__input {
   display: block;
   width: 100%;
-  margin: 0 0 29px 0;
   padding: 11px 16px 11px 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1264,7 +1252,6 @@ address {
 
 .form__textarea {
   padding-left: 16px;
-  margin-bottom: 20px;
 }
 
 .form__textarea::-webkit-input-placeholder {
@@ -1309,21 +1296,22 @@ address {
   fill: none;
   border: 2px solid #212121;
   border-radius: 2px;
+  cursor: pointer;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Outline for custom checkbox */
 }
 
+.form__checkmark:hover + .form__check-icon,
 .form__checkmark:focus + .form__check-icon,
 .form__checkmark:checked:focus + .form__check-icon {
-  outline: 2px solid #212121;
+  border: 2px solid #2196f3;
 }
 
 .form__checkmark:checked + .form__check-icon {
   background-color: #2196f3;
   border-color: #2196f3;
   fill: #ffffff;
-  outline: none;
 }
 
 .form__agreement {
